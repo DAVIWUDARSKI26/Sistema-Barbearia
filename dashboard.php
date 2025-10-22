@@ -25,12 +25,12 @@ $agendamentos = $stmt->fetchAll();
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Painel - Barbearia NW</title>
+    <title>Painel - Barbearia N/title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="dashboard">
     <header class="topo">
-        <h1>✂️ Painel — Olá, William</h1>
+        <h1>✂️ Painel</h1>
         <a href="logout.php" class="btn-sair">Sair</a>
     </header>
 

@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Login - Barbearia NW</title>
+    <title>Login - Barbearia</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="login">

@@ -25,7 +25,7 @@ $agendamentos = $stmt->fetchAll();
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Painel - Barbearia NW</title>
+    <title>Painel - Barbearia</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="dashboard">
