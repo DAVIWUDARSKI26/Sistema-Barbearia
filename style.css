@@ -1,0 +1,572 @@
+/* === ESTILO GERAL === */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(circle at top left, #0a0a0f, #050509 80%);
+    color: #e0e0e0;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background: linear-gradient(90deg, #000000, #0f172a);
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #1e90ff;
+}
+
+header h1 {
+    font-size: 1.5em;
+    color: #1e90ff;
+}
+
+a.btn-sair {
+    background: #1e90ff;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+a.btn-sair:hover {
+    background: #0066cc;
+}
+
+/* === PAINEL === */
+.painel {
+    display: flex;
+    gap: 20px;
+    padding: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* === CARDS === */
+.resumo {
+    background: #0f172a;
+    padding: 25px;
+    border-radius: 14px;
+    flex: 1 1 300px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+.resumo h2 {
+    color: #1e90ff;
+    margin-bottom: 15px;
+}
+
+.cards {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    background: #1a1a1f;
+    border-radius: 10px;
+    padding: 15px;
+    flex: 1 1 100px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+
+.card span {
+    display: block;
+    font-size: 1.8em;
+    margin-top: 5px;
+}
+
+.card.pendente { border-top: 3px solid #ffcc00; }
+.card.confirmado { border-top: 3px solid #1e90ff; }
+.card.concluido { border-top: 3px solid #4caf50; }
+.card.cancelado { border-top: 3px solid #f44336; }
+
+/* === FILTRO === */
+.filtro-data {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.filtro-data input {
+    background: #1a1a1f;
+    color: white;
+    border: 1px solid #333;
+    border-radius: 6px;
+    padding: 8px;
+    margin: 10px 0;
+}
+
+.filtro-data button {
+    background: #1e90ff;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}
+
+.filtro-data button:hover {
+    background: #0066cc;
+}
+
+/* === AGENDAMENTOS === */
+.agendamentos {
+    background: #0f172a;
+    padding: 25px;
+    border-radius: 14px;
+    flex: 2 1 500px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+.agendamentos h2 {
+    color: #1e90ff;
+    margin-bottom: 15px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #1a1a1f;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid #333;
+}
+
+th {
+    background: #1e90ff;
+    color: white;
+    text-align: left;
+}
+
+td {
+    color: #e0e0e0;
+}
+
+tr:hover {
+    background: #111;
+}
+
+.status {
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 0.85em;
+}
+
+.status.pendente { background: #ffcc00; color: #000; }
+.status.confirmado { background: #1e90ff; }
+.status.concluido { background: #4caf50; }
+.status.cancelado { background: #f44336; }
+
+.btn-ver {
+    background: #1e90ff;
+    border: none;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.btn-ver:hover {
+    background: #0066cc;
+}
+
+/* === INDEX (página de agendamento) === */
+.container-agendar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    padding: 40px;
+}
+
+.form-box, .info-box {
+    background: #0f172a;
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+.form-box {
+    flex: 2 1 400px;
+    text-align: left;
+}
+
+.form-box h2 {
+    color: #1e90ff;
+    margin-bottom: 5px;
+}
+
+.form-box h3 {
+    color: #fff;
+    margin-top: 0;
+}
+
+.form-box p {
+    color: #bbb;
+    margin-bottom: 15px;
+}
+
+.form-grid {
+    display: flex;
+    gap: 10px;
+}
+
+.form-box input, .form-box select {
+    width: 100%;
+    padding: 10px;
+    background: #1a1a1f;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.info-box {
+    flex: 1 1 250px;
+    color: #ccc;
+}
+
+.info-box h4 {
+    color: #1e90ff;
+    margin-bottom: 5px;
+}
+
+button[type="submit"] {
+    width: 100%;
+    background: #1e90ff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button[type="submit"]:hover {
+    background: #0066cc;
+}
+
+/* === NAVBAR === */
+.navbar {
+    background: rgba(10, 10, 20, 0.9);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    border-bottom: 1px solid #1e90ff;
+}
+
+.navbar .logo {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #fff;
+}
+.navbar .logo span {
+    color: #1e90ff;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+.navbar ul li a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-weight: 500;
+}
+.navbar ul li a:hover {
+    color: #1e90ff;
+}
+
+/* === HERO === */
+.hero {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(to right, #000000, #0a0f1f);
+    color: white;
+    padding: 50px;
+}
+
+.hero-text h1 {
+    font-size: 2.5em;
+    color: #1e90ff;
+}
+.hero-text p {
+    max-width: 600px;
+    margin: 20px auto;
+    color: #ccc;
+}
+.btn-primary {
+    background: #1e90ff;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.btn-primary:hover {
+    background: #0066cc;
+}
+
+/* === SEÇÕES === */
+section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.sobre, .contato, .agendar {
+    background: #0f172a;
+    color: #e0e0e0;
+    border-top: 1px solid #1e90ff20;
+}
+.sobre h2, .agendar h2, .contato h2 {
+    color: #1e90ff;
+}
+
+/* === CALENDÁRIO === */
+#calendar {
+    margin: 30px auto;
+    width: 80%;
+    max-width: 600px;
+    background: #1a1a1f;
+    border-radius: 10px;
+    padding: 20px;
+}
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+}
+.dia {
+    background: #222;
+    padding: 10px;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.dia.disponivel:hover {
+    background: #1e90ff;
+}
+.dia.ocupado {
+    background: #4a4a4a;
+    color: #999;
+    cursor: not-allowed;
+}
+.legend {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+.legend span {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 3px;
+}
+.legend .disp { background: #1e90ff; }
+.legend .ocup { background: #4a4a4a; }
+
+/* === CONTATO === */
+.contato p {
+    font-size: 1.1em;
+    color: #ccc;
+    line-height: 1.6;
+}
+
+/* === FOOTER === */
+footer {
+    background: #000;
+    color: #777;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #1e90ff20;
+}
+
+body {
+    background: #0a0a0f;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* NAVBAR */
+.navbar {
+    background: rgba(10,10,20,0.95);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 60px;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+}
+.navbar .logo { font-weight: bold; color: white; font-size: 1.4em; }
+.navbar .logo span { color: #1e90ff; }
+.navbar ul { list-style: none; display: flex; gap: 30px; }
+.navbar ul li a { text-decoration: none; color: #ccc; }
+.navbar ul li a:hover { color: #1e90ff; }
+.btn-azul {
+    background: #1e90ff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+}
+.btn-azul:hover { background: #0077ff; }
+
+/* HERO */
+.hero {
+    padding: 100px 60px;
+    background: linear-gradient(180deg, #0f172a, #000);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.hero-content {
+    max-width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+.card {
+    background: #111827;
+    padding: 40px;
+    border-radius: 20px;
+    flex: 1;
+    min-width: 300px;
+}
+.card h1 { color: #1e90ff; margin-top: 10px; }
+.card p { color: #ccc; line-height: 1.6; }
+.beneficios .box {
+    background: #111827;
+    border-radius: 12px;
+    padding: 20px;
+    color: #ccc;
+}
+
+/* SERVIÇOS */
+.servicos {
+    padding: 100px 40px;
+    text-align: center;
+    background: #0f172a;
+}
+.cards-servicos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.card-servico {
+    background: #111827;
+    border-radius: 12px;
+    padding: 25px;
+    width: 260px;
+}
+
+/* CALENDÁRIO */
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    margin: 30px auto;
+    max-width: 600px;
+}
+.dia {
+    background: #1a1a1f;
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px 0;
+}
+.dia.disponivel { border: 1px solid #1e90ff; color: #1e90ff; }
+.dia.lotado { border: 1px solid #ff3b3b; color: #ff3b3b; }
+.dia.fechado { border: 1px solid #444; color: #666; }
+.cabeca { font-weight: bold; color: #999; }
+
+/* FORMULÁRIO */
+.form-reserva {
+    background: #111827;
+    padding: 80px 40px;
+    text-align: center;
+}
+.form-box {
+    max-width: 600px;
+    margin: auto;
+    display: grid;
+    gap: 20px;
+}
+.campo { display: flex; flex-direction: column; text-align: left; }
+.campo input, .campo select {
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    background: #1a1a1f;
+    color: #fff;
+}
+
+/* CONTATO */
+.contato {
+    background: #0a0a0f;
+    padding: 80px;
+    text-align: center;
+}
+
+/* FOOTER */
+footer {
+    background: #000;
+    text-align: center;
+    padding: 20px;
+    color: #777;
+}
+
+.btn-confirmar {
+  background-color: #25d366;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.btn-confirmar:hover {
+  background-color: #1da851;
+}
+
+.btn-recusar {
+  background-color: #d32f2f;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.2s;
+  margin-left: 4px;
+}
+
+.btn-recusar:hover {
+  background-color: #b71c1c;
+}
