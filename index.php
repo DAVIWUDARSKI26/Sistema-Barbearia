@@ -14,7 +14,7 @@ $datasOcupadas = $stmt->fetchAll(PDO::FETCH_COLUMN);
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Barbearia NW — Corte com estilo</title>
+    <title>Barbearia — Corte com estilo</title>
     <link rel="stylesheet" href="style.css">
     <style> html { scroll-behavior: smooth; } </style>
 </head>
@@ -22,7 +22,7 @@ $datasOcupadas = $stmt->fetchAll(PDO::FETCH_COLUMN);
 
 <!-- 🔝 NAVBAR -->
 <header class="navbar">
-    <div class="logo">💈 Barbearia <span>NW</span></div>
+    <div class="logo">💈 Barbearia <span></span></div>
     <nav>
         <ul>
             <li><a href="#servicos">Serviços</a></li>
@@ -138,7 +138,7 @@ $datasOcupadas = $stmt->fetchAll(PDO::FETCH_COLUMN);
 </section>
 
 <footer>
-    <p>© 2025 Barbearia NW. Todos os direitos reservados.</p>
+    <p>© 2025 Barbearia . Todos os direitos reservados.</p>
 </footer>
 
 <script>
